@@ -5,6 +5,5 @@ def getFactorial():
         if number.isdigit() == False:
             print(number + " не целое положительное число")
         else:
-            getFactorialNumber = math.factorial(int(number))
-            return getFactorialNumber
+            return math.factorial(int(number))
 print(getFactorial())
