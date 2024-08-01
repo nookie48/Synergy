@@ -10,12 +10,7 @@ uses
 
 type
   TForm1 = class(TForm)
-    ButtonStart: TButton;
-    ButtonStop: TButton;
-    EditPort: TEdit;
-    Label1: TLabel;
     ApplicationEvents1: TApplicationEvents;
-    ButtonOpenBrowser: TButton;
     ADOConnection1: TADOConnection;
     ADOQuery1: TADOQuery;
     ADOQuery1id: TAutoIncField;
@@ -37,6 +32,7 @@ type
     procedure ButtonStartClick(Sender: TObject);
     procedure ButtonStopClick(Sender: TObject);
     procedure ButtonOpenBrowserClick(Sender: TObject);
+    procedure DBEdit4Change(Sender: TObject);
   private
     FServer: TIdHTTPWebBrokerBridge;
     procedure StartServer;
@@ -89,6 +85,11 @@ procedure TForm1.ButtonStopClick(Sender: TObject);
 begin
   FServer.Active := False;
   FServer.Bindings.Clear;
+end;
+
+procedure TForm1.DBEdit4Change(Sender: TObject);
+begin
+
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
